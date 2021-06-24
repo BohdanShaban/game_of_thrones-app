@@ -1,15 +1,15 @@
 export default class gotService {  // export default  
 
   constructor() {
-    this._APIurlBase = 'https://anapioficeandfire.com/api/'; // !!!  this.  !!!
+    this._apiUrlBase = 'https://anapioficeandfire.com/api/'; // !!!  this.  !!!
   }
 
   // !!!!!  CRUCIAL THING: Where Promice Will Be Returned ? -> Then .then() Should Be Used  !!!!!
 
-  async getResourse() { // BASE f() FOR ALL NEXT f()s
-    const res = await fetch ( `${this._APIurlBase}` ); //  !!!  await -> fetch()  !!! 
+  getResource = async (url) => { // BASE f() FOR ALL NEXT f()s
+    const res = await fetch(`${this._apiUrlBase}${url}`); //  !!!  await -> fetch()  !!! 
 
-    if (! res.ok) { throw new Error(`!!!!!! COULD NOT FENTCH ${this._APIurlBase}. Error status: ${res.status} !!!!!!`) };
+    if (! res.ok) { throw new Error(`!!!!!! COULD NOT FENTCH ${this._apiUrlBase}. Error status: ${res.status} !!!!!!`) };
 
     return await res.json(); //  !!!  await -> .json()  !!! 
   }
