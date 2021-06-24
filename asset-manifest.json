@@ -1,7 +1,7 @@
 {
   "main.css": "/game_of_thrones-app/static/css/main.d3cd30a3.chunk.css",
-  "main.js": "/game_of_thrones-app/static/js/main.0ae2285f.chunk.js",
-  "main.js.map": "/game_of_thrones-app/static/js/main.0ae2285f.chunk.js.map",
+  "main.js": "/game_of_thrones-app/static/js/main.6ae95498.chunk.js",
+  "main.js.map": "/game_of_thrones-app/static/js/main.6ae95498.chunk.js.map",
   "static/css/1.a09ecb6e.chunk.css": "/game_of_thrones-app/static/css/1.a09ecb6e.chunk.css",
   "static/js/1.fb917320.chunk.js": "/game_of_thrones-app/static/js/1.fb917320.chunk.js",
   "static/js/1.fb917320.chunk.js.map": "/game_of_thrones-app/static/js/1.fb917320.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/media/error.jpg": "/game_of_thrones-app/static/media/error.22389cf4.jpg",
   "static/css/main.d3cd30a3.chunk.css.map": "/game_of_thrones-app/static/css/main.d3cd30a3.chunk.css.map",
   "index.html": "/game_of_thrones-app/index.html",
-  "precache-manifest.67fec815482a8a8db63f3a28983639f7.js": "/game_of_thrones-app/precache-manifest.67fec815482a8a8db63f3a28983639f7.js",
+  "precache-manifest.7def03d8b6c741576acd61a5f0fb6a26.js": "/game_of_thrones-app/precache-manifest.7def03d8b6c741576acd61a5f0fb6a26.js",
   "service-worker.js": "/game_of_thrones-app/service-worker.js"
 }

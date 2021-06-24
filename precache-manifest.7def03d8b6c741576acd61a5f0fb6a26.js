@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/game_of_thrones-app/static/js/runtime~main.42cd7fb5.js"
   },
   {
-    "revision": "0ae2285fd9264dd2e2d2",
-    "url": "/game_of_thrones-app/static/js/main.0ae2285f.chunk.js"
+    "revision": "6ae95498719533450380",
+    "url": "/game_of_thrones-app/static/js/main.6ae95498.chunk.js"
   },
   {
     "revision": "fb917320d0c0291a1318",
     "url": "/game_of_thrones-app/static/js/1.fb917320.chunk.js"
   },
   {
-    "revision": "0ae2285fd9264dd2e2d2",
+    "revision": "6ae95498719533450380",
     "url": "/game_of_thrones-app/static/css/main.d3cd30a3.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/game_of_thrones-app/static/css/1.a09ecb6e.chunk.css"
   },
   {
-    "revision": "6d56e1ce23b048cf944d918d2c4bc2d9",
+    "revision": "8e8b4c0206a9e7c7a34edab3c7011e34",
     "url": "/game_of_thrones-app/index.html"
   }
 ];
