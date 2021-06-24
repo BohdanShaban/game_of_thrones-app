@@ -37,7 +37,6 @@ export default class RandomChar extends Component {
             error: true,
             loading: false
         })
-
         console.log(err);
     }
 

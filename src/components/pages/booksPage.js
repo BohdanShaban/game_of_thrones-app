@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ItemList from '../itemList';
 import ErrorMessage from '../errorMessage';
-import gotService from '../../services/gotService';
+import gotService from '../../components/services/got_service';
 import {withRouter} from 'react-router-dom';
 
 export class BooksPage extends Component {
@@ -32,7 +32,7 @@ export class BooksPage extends Component {
         return (
             <ItemList 
             onItemSelected={(itemId) => {
-                this.props.history.push(itemId)
+                this.props.history.push(itemId) // React Router
             }}
             getData={this.gotService.getAllBooks}
             renderItem={({name}) => name}/>
