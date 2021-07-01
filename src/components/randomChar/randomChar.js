@@ -4,6 +4,8 @@ import './randomChar.css';
 import gotService from './../services/got_service.js';
 import Spinner from '../spinner';
 import ErrorMessage from '../errorMessage';
+import {Col, Row, Container} from 'reactstrap';
+
 
 
 export default class RandomChar extends Component {
@@ -57,11 +59,19 @@ export default class RandomChar extends Component {
         const content = !(loading || error) ? <View char={char}/> : null;
 
         return (
-            <div className="random-block rounded">
-                {errorMessage}
-                {spinner}
-                {content}
-            </div>
+
+            <Row>
+                <Col lg={ {size: 5, offset: 0} }>
+
+                    <div className="random-block rounded">
+
+                        {errorMessage}
+                        {spinner}
+                        {content}
+            
+                    </div> 
+                </Col>
+            </Row> 
         );
     }
 }
