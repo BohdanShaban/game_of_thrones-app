@@ -48,20 +48,27 @@ export default class App extends Component {
         }
         
         return (
-            <> 
-                <Container>
-                    <Header />
-                </Container>
-                
-                <Container>
+            
+            <Router>
+                <div className="app"> 
 
-                    { randChar }
-                    < ToggleBtn onClick={this.toggleRandomChar}/>
+                    <Container>
+                        <Header />
+                    </Container>
+                    
+                    <Container>
 
-                    < HousesPage/>
 
-                </Container>
-            </>
+                        { randChar }
+                        < ToggleBtn onClick={this.toggleRandomChar}/>
+
+                        < Route path='/characters' component={CharacterPage}/>
+                        < Route path='/houses' component={HousesPage}/>
+                        < Route path='/books' component={BooksPage}/>
+
+                    </Container>
+                </div>
+            </Router>
         );
     };
 }

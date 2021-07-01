@@ -8,7 +8,7 @@ import RowBlock from '../rowBlock';
 import Field from '../field/field.js';
 
 
-export class BooksPage extends Component {
+export default class BooksPage extends Component {
     gotService = new gotService();
 
     state = {
@@ -37,20 +37,19 @@ export class BooksPage extends Component {
 
         const itemList = (
 
-            <ItemList   onItemSelected={(itemId) => { this.props.history.push(itemId)  }}
+            <ItemList   onItemSelected={ this.onItemSelected }  // (itemId) => { this.props.history.push(itemId)}
                         getData={this.gotService.getAllBooks}
                         renderItem={({name}) => `${name}`} />
         ) 
 
         const itemDetails = (
 
-            <ItemDetails    itemId={this.state.selectedItem}
+            <ItemDetails    itemId={this.state.selectedBook}
                             getData={this.gotService.getBook}>
 
                                 <Field field='numberOfPages' label='Pages Number:' />
                                 <Field field='publisher' label='Publisher:' />
                                 <Field field='released' label='Released:' />
-                                {/* <Field field='culture' label='Culture' /> */}
             </ItemDetails>
         )
 
@@ -59,4 +58,5 @@ export class BooksPage extends Component {
         )
     }
 }
-export default withRouter(BooksPage);
+
+//export default withRouter(BooksPage)
