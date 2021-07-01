@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import ItemList from '../itemList';
-import ItemDetails, {Field} from '../itemDetails';
+import ItemDetails from '../itemDetails';
 import ErrorMessage from '../errorMessage';
-import gotService from '../../services/gotService';
+import gotService from '../services/got_service.js';
 import RowBlock from '../rowBlock';
+import Field from '../field/field.js';
 
 export default class HousesPage extends Component {
     
@@ -32,25 +33,26 @@ export default class HousesPage extends Component {
         }
 
         const itemList = (
-            <ItemList 
-                onItemSelected={this.onItemSelected}
-                getData={this.gotService.getAllHouses}
-                renderItem={({name}) => name}/>
-        )
+
+            <ItemList   onItemSelected={this.onItemSelected}
+                        getData={this.gotService.getAllHouses}
+                        renderItem={({name}) => `${name}`} />
+        ) 
 
         const itemDetails = (
-            <ItemDetails
-            itemId={this.state.selectedHouse}
-            getData={this.gotService.getHouse} >
-                <Field field='region' label='Region'/>
-                <Field field='words' label='Words'/>
-                <Field field='titles' label='Titles'/>
-                <Field field='ancestralWeapons' label='Ancestral Weapons'/>
+
+            <ItemDetails    itemId={this.state.selectedHouse}
+                            getData={this.gotService.getHouse}>
+
+                            <Field field='region' label='Region'/>
+                            <Field field='words' label='Words'/>
+                            <Field field='titles' label='Titles'/>
+                            <Field field='ancestralWeapons' label='Ancestral Weapons'/>
             </ItemDetails>
         )
 
         return (
-           <RowBlock left={itemList} right={itemDetails} />
+            < RowBlock left={itemList} right={itemDetails}/>
         )
     }
 }

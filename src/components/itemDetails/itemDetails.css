@@ -14,3 +14,8 @@
     text-align: center;
     font-size: 26px;
 }
+
+.itemUnselected {
+    color: #fff;
+    font-size: 26px;
+}

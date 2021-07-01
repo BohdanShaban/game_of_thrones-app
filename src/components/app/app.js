@@ -2,16 +2,20 @@ import React, {Component} from 'react';
 import {Col, Row, Container} from 'reactstrap';
 import Header from '../header';
 import RandomChar from '../randomChar';
-
 import ItemList from '../itemList';
-import CharDetails from '../charDetails';
-
+import ItemDetails from '../itemDetails';
 import ErrorMessage from '../errorMessage';
-import {CharacterPage, BooksPage, HousesPage, BooksItem} from '../pages';
 import gotService from '../services/got_service.js';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Field from '../field/field.js';
+import RowBlock from '../rowBlock/';
+
+import {CharacterPage, BooksPage, HousesPage} from '../pages';
+
+
 
 import './app.css';
+
 
 
 export default class App extends Component {
@@ -21,7 +25,7 @@ export default class App extends Component {
     state = {
         showRandomChar: true,
         error: false,
-        selectedHouse: 20
+        selectedItem: null
     };
 
     componentDidCatch() {
@@ -39,38 +43,60 @@ export default class App extends Component {
         });
     };
 
+    onItemSelected = (id) => {
+        this.setState({
+            selectedItem: id
+        })
+        console.log(`selectedItem:${this.state.selectedItem}`);
+    }
+
     render() {
         const char = this.state.showRandomChar ? <RandomChar/> : null;
 
         if (this.state.error) {
             return <ErrorMessage/>
         }
+
+        // const itemList = (
+
+        //     <ItemList   onItemSelected={this.onItemSelected}
+        //                 getData={this.gotService.getAllCharacters}
+        //                 renderItem={({name}) => `${name}`} />
+        // ) 
+
+        // const itemDetails = (
+
+        //     <ItemDetails    itemId={this.state.selectedItem}
+        //                     getData={this.gotService.getCharacter}>
+
+        //                         <Field field='gender' label='Gender' />
+        //                         <Field field='born' label='Born' />
+        //                         <Field field='died' label='Died' />
+        //                         <Field field='culture' label='Culture' />
+        //     </ItemDetails>
+        // )
         
         return (
-            <Router> 
-                <div className='app'>
-                    <Container>
-                        <Header />
-                    </Container>
-                    <Container>
-                        <Row>
-                            <Col lg={{size: 5, offset: 0}}>
-                            {char}
-                            <button 
-                                className="toggle-btn"
-                                onClick={this.toggleRandomChar}>Toggle random character</button>
-                            </Col>
-                        </Row>
-                        <Route path='/' component={ () => <h1>Welcome to GOT DB</h1>} exact/>
-                        <Route path='/characters' component={CharacterPage} />
-                        <Route path='/books' component={BooksPage} exact/>
-                        <Route path='/books/:id' render={({match}) => {
-                            const {id} = match.params;
-                        return <BooksItem bookId={id}/>}}/>
-                        <Route path='/houses' component={HousesPage} />
-                    </Container>
-                </div>
-            </Router>
+            <> 
+                <Container>
+                    <Header />
+                </Container>
+                
+                <Container>
+                    <Row>
+                        <Col lg={{size: 5, offset: 0}}>
+                            { char }
+                                <button 
+                                    className="toggle-btn"
+                                    onClick={this.toggleRandomChar}>Toggle random character
+                                </button>
+                        </Col>
+                    </Row>
+
+                    < HousesPage/>
+
+                </Container>
+            </>
         );
     };
 }

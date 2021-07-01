@@ -9,7 +9,7 @@ export default class gotService {  // export default
   getResource = async (url) => { // BASE f() FOR ALL NEXT f()s
     const res = await fetch(`${this._apiUrlBase}${url}`); //  !!!  await -> fetch()  !!! 
 
-    if (! res.ok) { throw new Error(`!!!!!! COULD NOT FENTCH ${this._apiUrlBase}. Error status: ${res.status} !!!!!!`) };
+    if (! res.ok) { throw new Error(`!!!!!! COULD NOT FETCH ${this._apiUrlBase}. Error status: ${res.status} !!!!!!`) };
 
     return await res.json(); //  !!!  await -> .json()  !!! 
   }
