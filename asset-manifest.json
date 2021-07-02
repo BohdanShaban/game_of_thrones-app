@@ -1,17 +1,17 @@
 {
   "main.css": "/game_of_thrones-app/static/css/main.1768950f.chunk.css",
-  "main.js": "/game_of_thrones-app/static/js/main.78e04dcc.chunk.js",
-  "main.js.map": "/game_of_thrones-app/static/js/main.78e04dcc.chunk.js.map",
+  "main.js": "/game_of_thrones-app/static/js/main.b671d5ff.chunk.js",
+  "main.js.map": "/game_of_thrones-app/static/js/main.b671d5ff.chunk.js.map",
   "static/css/1.b744f2f3.chunk.css": "/game_of_thrones-app/static/css/1.b744f2f3.chunk.css",
   "static/js/1.326524ff.chunk.js": "/game_of_thrones-app/static/js/1.326524ff.chunk.js",
   "static/js/1.326524ff.chunk.js.map": "/game_of_thrones-app/static/js/1.326524ff.chunk.js.map",
   "runtime~main.js": "/game_of_thrones-app/static/js/runtime~main.42cd7fb5.js",
   "runtime~main.js.map": "/game_of_thrones-app/static/js/runtime~main.42cd7fb5.js.map",
-  "static/css/main.1768950f.chunk.css.map": "/game_of_thrones-app/static/css/main.1768950f.chunk.css.map",
+  "static/css/1.b744f2f3.chunk.css.map": "/game_of_thrones-app/static/css/1.b744f2f3.chunk.css.map",
   "static/media/error.jpg": "/game_of_thrones-app/static/media/error.22389cf4.jpg",
   "static/media/app.css": "/game_of_thrones-app/static/media/got.4da81083.jpeg",
-  "static/css/1.b744f2f3.chunk.css.map": "/game_of_thrones-app/static/css/1.b744f2f3.chunk.css.map",
+  "static/css/main.1768950f.chunk.css.map": "/game_of_thrones-app/static/css/main.1768950f.chunk.css.map",
   "index.html": "/game_of_thrones-app/index.html",
-  "precache-manifest.ba7997cc1d162c6eed8d95f57470327d.js": "/game_of_thrones-app/precache-manifest.ba7997cc1d162c6eed8d95f57470327d.js",
+  "precache-manifest.372827a0b0bd502161835730ff00f1ea.js": "/game_of_thrones-app/precache-manifest.372827a0b0bd502161835730ff00f1ea.js",
   "service-worker.js": "/game_of_thrones-app/service-worker.js"
 }
