@@ -53,7 +53,7 @@ export default class ItemDetails extends Component {
     render() {
 
         if( !this.state.item) {
-            return <span className="spanUnselected">Please Select SomeThing From ItemList...</span>
+            return <span className="spanUnselected">Please Select Something From ItemList on the left...</span>
         }
 
         if( this.state.error) {
